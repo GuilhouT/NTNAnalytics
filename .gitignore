@@ -1,3 +1,5 @@
 *.swp
 
-db/mongo_data/**
+db/mongo_data/*
+
+npm-debug.log
