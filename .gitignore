@@ -1,5 +1,6 @@
 *.swp
 
 db/mongo_data/*
+.sass-cache/*
 
 npm-debug.log
