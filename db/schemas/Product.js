@@ -10,7 +10,7 @@ module.exports = mongoose.Schema({
   price: Number,
 
   category: String,
-  mondel: String,
+  model: String,
 
   rating: Number,
   reviews: Number

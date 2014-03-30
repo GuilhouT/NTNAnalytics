@@ -1,8 +1,18 @@
+var models = require('../db/models');
 
-/*
- * GET home page.
- */
+exports.build = function (app) {
 
-exports.index = function(req, res){
-  res.render('index', { title: 'NTN Analitycs' });
+  app.get('/', function (req, res){
+    res.render('index', { title: 'NTN Analitycs' });
+  });
+
+  app.get('/products', function (req, res) {
+    models.Product.find({}, 'name price description price category rating reviews')
+      .exec(function (err, docs) {
+        res.send({
+          products: docs
+        });
+      });
+  });
+
 };

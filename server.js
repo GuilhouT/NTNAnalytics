@@ -5,7 +5,6 @@
 
 var express = require('express'),
     routes = require('./routes'),
-    user = require('./routes/user'),
     http = require('http'),
     path = require('path'),
     mongoose = require('mongoose'),
@@ -33,8 +32,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+// Routes
+routes.build(app);
 
 function connectToMongo(callback) {
   var db = mongoose.connect('mongodb://localhost/analytics').connection;

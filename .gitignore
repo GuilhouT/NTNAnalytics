@@ -2,5 +2,8 @@
 
 db/mongo_data/*
 .sass-cache/*
+public/bower_components/*
+node_modules/*
+
 
 npm-debug.log

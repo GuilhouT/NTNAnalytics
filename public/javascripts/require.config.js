@@ -2,13 +2,13 @@ require.config({
 
   baseUrl: 'javascripts',
   paths: {
-    'jquery': 'vendor/jquery-1.10.2',
+    'jquery': '../bower_components/jquery/dist/jquery.min',
     'jquery-ui': 'vendor/jquery-ui',
     'd3': 'vendor/d3',
     'nvd3': 'vendor/nv.d3',
-    'hbs': 'vendor/handlebars-1.1.2',
-    'ember': 'vendor/ember-1.2.0',
-    'ember-data': 'vendor/ember-data'
+    'hbs': '../bower_components/handlebars/handlebars.min',
+    'ember': '../bower_components/ember/ember.min',
+    'ember-data': '../bower_components/ember-data/ember-data.min'
   },
 
   shim: {
@@ -27,5 +27,10 @@ require.config({
 });
 
 // Initial require to load the app
-require(['app']);
+require([
+  'app',
+
+  // Views
+  'ProductByRatingChartView'
+]);
 
